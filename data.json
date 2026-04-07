@@ -1,0 +1,72 @@
+{
+  "profil_professionnel": {
+    "identite": "Muslim Bayschanov",
+    "statut": "Étudiant en BTS SIO (Services Informatiques aux Organisations)",
+    "specialite": "Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) [cite: 413, 498, 520]",
+    "formation": "Lycée Turgot (Paris 3ème) [cite: 500, 520]",
+    "recherche": {
+      "stage": "Administration Systèmes, Réseaux & Cybersécurité (18/05 au 03/07/2025) [cite: 502]",
+      "alternance": "Contrat de 12 mois pour la rentrée 2026"
+    },
+    "contact": {
+      "ville": "Vitry-Sur-Seine [cite: 505]",
+      "email": "baysmuslim@gmail.com [cite: 505]",
+      "telephone": "06.95.13.05.64 [cite: 505]",
+      "linkedin": "linkedin.com/in/muslimbays [cite: 505]",
+      "portfolio": "https://msb94r.github.io/eportfolio.msb94r/ [cite: 501, 537]"
+    },
+    "langues": {
+      "maternel": "Tchétchène [cite: 513]",
+      "russe": "Niveau B2 [cite: 513]",
+      "anglais": "Niveau B1 [cite: 512]"
+    }
+  },
+  "competences_techniques": {
+    "systemes_reseaux": "Windows & Linux, Virtualisation (VMware), Configuration Cisco (Switch, VLAN, Routage), OCS Inventory, GLPI [cite: 501, 509, 510]",
+    "developpement": "HTML5, CSS3, JavaScript ES6 (Modules), PHP, Python, SQL [cite: 95, 226, 335, 510]",
+    "expertises_ia": "Architecture IA Hybride (Mistral/Ollama), Modèles SLM (Small Language Models) [cite: 11, 98, 527, 528]",
+    "outils_web": "Visual Studio Code, Firebase Firestore, API PayPal, Formspree, GitHub Pages [cite: 10, 75, 228, 337, 510]"
+  },
+  "projets_et_realisations": {
+    "Rituels_du_Monde_Spa": {
+      "concept": "Plateforme hybride de Spa & Bien-être [cite: 2, 43]",
+      "innovation_majeure": "Infrastructure IA hybride avec système de Failover (bascule automatique) [cite: 58, 98, 99]",
+      "details_techniques": {
+        "mode_nominal": "Requêtes vers API Mistral Cloud (modèle mistral-small) [cite: 19, 101, 102]",
+        "mode_degrade": "En cas de panne réseau (détectée par catch error JS), bascule sur Ollama local (modèle mistral-nemo < 7Go) [cite: 19, 23, 104-108]",
+        "fonctionnalites": "Wizard de réservation en 3 étapes (Soin, Date/Heure via Flatpickr, Finalisation) sans rechargement de page [cite: 15, 38, 68-71]",
+        "securite": "Données clients stockées exclusivement sur Firebase Firestore, logs IA sans données personnelles (RGPD) [cite: 25, 40, 122]"
+      }
+    },
+    "Shop_Ton_Auto_Concession": {
+      "concept": "Plateforme de vente de véhicules d'occasion [cite: 125, 182, 190]",
+      "details_techniques": {
+        "front_office": "Filtrage dynamique (budget, carburant, année) et formulaire de demande de rachat de véhicule [cite: 145, 179, 207-213]",
+        "back_office": "Dashboard sécurisé pour le gérant avec gestion complète du stock (CRUD) et réception des leads [cite: 148, 176, 218-223]",
+        "tests": "Validation de la navigation clavier (Tab) et de la redirection automatique vers login si accès non autorisé au dashboard [cite: 153, 156]"
+      }
+    },
+    "Chicken_Point_Restauration": {
+      "concept": "Site vitrine pour restaurant à Aubervilliers [cite: 244, 307, 320]",
+      "details_techniques": {
+        "architecture": "Développement statique sur mesure (HTML/CSS/JS) pour une sécurité maximale et rapidité de chargement [cite: 335, 336, 394]",
+        "interactivite": "Navigation interne par ScrollSpy (Top Ventes, Burgers, Tex-Mex) et bouton flottant de commande Uber Eats [cite: 261, 356, 359]",
+        "contact": "Formulaire géré via l'API AJAX Formspree [cite: 261, 337, 364]"
+      }
+    }
+  },
+  "veille_technologique": {
+    "sujet": "L'apport de l'IA dans la cyberdéfense proactive et l'anticipation des menaces [cite: 415, 416]",
+    "problematique": "Passer d'une sécurité réactive à une posture prédictive face aux cybermenaces [cite: 418]",
+    "axes_de_recherche": [
+      "IA Prédictive : Analyse comportementale pour détecter les anomalies réseau avant l'attaque finale [cite: 428-430]",
+      "Automatisation des SOC : Utilisation de Copilotes de sécurité (IA générative) pour trier les alertes et réduire le temps d'investigation [cite: 432-437, 444]",
+      "IA contre IA : Réponse aux malwares polymorphes par une IA défensive capable de réagir en quelques millisecondes [cite: 438-440]"
+    ],
+    "outils": "Feedly (flux RSS ANSSI, LeMagIT, ZDNet), Google Alerts, Rapports Gartner/IBM [cite: 422-424, 444, 491]"
+  },
+  "autres_activites": {
+    "professionnel": "Hôte de caisse / Employé polyvalent chez E.Leclerc (Vitry) depuis juin 2025 [cite: 530, 531]",
+    "interets": "Lutte (en club), musculation, voyages (Russie, Turquie, Pays-Bas, Maroc) [cite: 515-518]"
+  }
+}
