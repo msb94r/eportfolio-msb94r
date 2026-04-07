@@ -51,7 +51,7 @@ app.post('/api/chat', async (req, res) => {
       },
       body: JSON.stringify({
         model: 'mistral-small-latest',
-        messages: messagesToSend
+        messages: messagesToSend,
         temperature: 0.7
       })
     });
