@@ -88,7 +88,7 @@ export default function Projets() {
         charges: '/ritualsdumonde/cachierdeschargesritualsdumonde.pdf',
         recettes: '/ritualsdumonde/cahierderecetteritualtsdumonde.pdf',
         tests: '/ritualsdumonde/cahierdetestritualsdumonde.pdf',
-        gantt: '#'
+        gantt: '/ritualsdumonde/ritualsdumondegants.png'
       }
     },
     {
@@ -112,7 +112,7 @@ export default function Projets() {
         charges: '/shoptonauto/cachierdeschargesshoptonauto.pdf',
         recettes: '/shoptonauto/cahierderecetteshoptonauto.pdf',
         tests: '/shoptonauto/cahierdetestshoptonauto.pdf',
-        gantt: '#'
+        gantt: '/shoptonauto/shoptonautogants.png'
       }
     }
   ];
