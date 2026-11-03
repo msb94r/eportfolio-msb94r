@@ -50,6 +50,7 @@ export const translations = {
       sys2: "Gestion des utilisateurs, droits d'accès",
       sys3: "Sécurisation des systèmes (mises à jour, antivirus...)",
       sys4: "Automatisation des tâches système (Bash)",
+      sys5: "Gestion, création et resolution de ticket sur GLPI",
       net: "RÉSEAUX",
       net1: "Mise en place de réseaux locaux (LAN)",
       net2: "Configuration de routeurs et commutateurs",
