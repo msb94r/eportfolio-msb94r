@@ -12,7 +12,8 @@ export default function Competences() {
         t('competences.sys1'),
         t('competences.sys2'),
         t('competences.sys3'),
-        t('competences.sys4')
+        t('competences.sys4'),
+        t('competences.sys5')
       ],
       techs: 'Windows, Windows Server, Ubuntu, Debian'
     },
