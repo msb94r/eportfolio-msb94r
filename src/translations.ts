@@ -56,6 +56,7 @@ export const translations = {
       net2: "Configuration de routeurs et commutateurs",
       net3: "Configuration et gestion des pare-feu",
       net4: "Dépannage et diagnostic réseau",
+      net5: "Scrypte",
       cloud: "CLOUD & VIRTUALISATION",
       cloud1: "Mise en place de lab virtuel",
       cloud2: "Création et gestion de machines virtuelles (VM)",
