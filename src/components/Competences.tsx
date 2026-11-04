@@ -24,7 +24,8 @@ export default function Competences() {
         t('competences.net1'),
         t('competences.net2'),
         t('competences.net3'),
-        t('competences.net4')
+        t('competences.net4'),
+        t('competences.net5')
       ],
       techs: 'Cisco, Packet Tracer, Wireshark'
     },
