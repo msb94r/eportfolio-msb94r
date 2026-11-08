@@ -15,7 +15,7 @@ export default function Competences() {
         t('competences.sys4'),
         t('competences.sys5')
       ],
-      techs: 'Windows, Windows Server, Ubuntu, Debian'
+      techs: 'Windows Server, AD, Debian, Ubuntu, Bash/PowerShell'
     },
     {
       category: t('competences.net'),
@@ -27,7 +27,7 @@ export default function Competences() {
         t('competences.net4'),
         t('competences.net5')
       ],
-      techs: 'Cisco, Packet Tracer, Wireshark'
+      techs: 'Cisco, Packet Tracer, pfSense, Wireshark, ntopNG'
     },
     {
       category: t('competences.cloud'),
@@ -37,7 +37,7 @@ export default function Competences() {
         t('competences.cloud2'),
         t('competences.cloud3')
       ],
-      techs: 'VirtualBox, VMware, Proxmox'
+      techs: 'Proxmox VE, VMware, VirtualBox, BackupManager'
     },
     {
       category: t('competences.sec'),
@@ -48,7 +48,7 @@ export default function Competences() {
         t('competences.sec3'),
         t('competences.sec4')
       ],
-      techs: t('competences.secTech')
+      techs: 'Snort, Suricata, GPG, gocryptfs, SSL/SSH'
     },
     {
       category: t('competences.tools'),
@@ -59,7 +59,7 @@ export default function Competences() {
         t('competences.tools3'),
         t('competences.tools4')
       ],
-      techs: ''
+      techs: 'GLPI, Zabbix, Nagios, Puppet, Ansible, KeePass'
     },
     {
       category: t('competences.proj'),
@@ -70,7 +70,7 @@ export default function Competences() {
         t('competences.proj3'),
         t('competences.proj4')
       ],
-      techs: ''
+      techs: 'Cahier des charges, SLA, Schématisation (Draw.io / Visio)'
     }
   ];
 
