@@ -1,6 +1,6 @@
 {
-  "name": "Copy of E-Portfolio Muslim Bayschanov",
-  "description": "Un e-portfolio moderne, épuré et hybride pour Muslim Bayschanov, Administrateur Système \u0026 Réseau.",
+  "name": "Muslim Bayschanov — Portfolio BTS SIO SISR",
+  "description": "Portfolio professionnel de Muslim Bayschanov, étudiant en BTS SIO option SISR. Administration systèmes, réseaux d'entreprise et cybersécurité.",
   "requestFramePermissions": [],
   "capabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
