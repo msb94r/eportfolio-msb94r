@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -32,8 +32,10 @@ export default function Navbar() {
     { name: t('nav.parcours'), href: '#parcours' },
     { name: t('nav.certifications'), href: '#certifications' },
     { name: t('nav.competences'), href: '#compétences' },
+    { name: t('nav.protocoles'), href: '#protocoles' },
     { name: t('nav.projets'), href: '#projets' },
     { name: t('nav.veille'), href: '#veille' },
+    { name: 'CyberLab', href: '#soft-skills' },
     { name: t('nav.synthese'), href: '#tableau-synthese' },
     { name: t('nav.contact'), href: '#contact' }
   ];
@@ -56,26 +58,13 @@ export default function Navbar() {
             ))}
           </ul>
           
-          <div className="w-px h-4 bg-zinc-300 dark:bg-zinc-700 hidden lg:block"></div>
-          
-          <div className="flex items-center gap-2">
-            <button 
-              onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')} 
-              className="flex items-center justify-center gap-1.5 px-3 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors text-xs font-bold uppercase"
-              aria-label="Toggle language"
-            >
-              <Globe size={14} />
-              {language}
-            </button>
-            
-            <button
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-              aria-label="Open menu"
-            >
-              <Menu size={16} />
-            </button>
-          </div>
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="lg:hidden flex items-center justify-center w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+            aria-label="Open menu"
+          >
+            <Menu size={16} />
+          </button>
         </nav>
       </div>
 

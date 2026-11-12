@@ -1,5 +1,8 @@
 {
   "name": "Copy of E-Portfolio Muslim Bayschanov",
   "description": "Un e-portfolio moderne, épuré et hybride pour Muslim Bayschanov, Administrateur Système \u0026 Réseau.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

@@ -53,6 +53,29 @@
         "interactivite": "Navigation interne par ScrollSpy (Top Ventes, Burgers, Tex-Mex) et bouton flottant de commande Uber Eats [cite: 261, 356, 359]",
         "contact": "Formulaire géré via l'API AJAX Formspree [cite: 261, 337, 364]"
       }
+    },
+    "Infrastructure_Active_Directory_WDS": {
+      "concept": "Infrastructure d'entreprise Windows Server 2022",
+      "details_techniques": {
+        "services": "Contrôleur de domaine AD DS, GPO, DHCP et DNS",
+        "deploiement": "Automatisation du déploiement de postes clients avec WDS et Clonezilla"
+      }
+    },
+    "Supervision_GLPI_Zabbix": {
+      "concept": "Plateforme de gestion de parc et de supervision informatique",
+      "details_techniques": {
+        "inventaire": "Inventaire automatisé avec OCS Inventory",
+        "ticketing": "Gestion centralisée du cycle de vie des incidents via GLPI",
+        "monitoring": "Surveillance des serveurs et switchs en temps réel avec Zabbix"
+      }
+    },
+    "Securisation_Reseau_pfSense": {
+      "concept": "Architecture réseau sécurisée avec pare-feu pfSense et VPN",
+      "details_techniques": {
+        "segmentation": "VLANs étanches (utilisateurs, serveurs, invités)",
+        "firewall": "Règles de filtrage strictes et portail captif sécurisé",
+        "acces_distant": "Tunnels VPN IPsec et OpenVPN chiffrés"
+      }
     }
   },
   "veille_technologique": {
@@ -65,6 +88,41 @@
     ],
     "outils": "Feedly (flux RSS ANSSI, LeMagIT, ZDNet), Google Alerts, Rapports Gartner/IBM [cite: 422-424, 444, 491]"
   },
+  "experiences_professionnelles": [
+    {
+      "intitule": "Stagiaire Administrateur Systèmes & Réseaux",
+      "type": "Stage",
+      "periode": "Mai 2025 — Juillet 2025 (7 semaines)",
+      "structure": "DSI / Entreprise Partenaire (Île-de-France)",
+      "missions": [
+        "Déploiement et intégration de postes Windows 10/11 et Linux au domaine Active Directory avec application de GPO",
+        "Configuration d'équipements réseaux Cisco : switchs, segmentation et routage inter-VLAN, points d'accès Wi-Fi",
+        "Gestion du parc informatique, inventaire et traitement des tickets incidents N1/N2 via GLPI & OCS Inventory",
+        "Surveillance et durcissement des accès réseaux, application des correctifs de sécurité"
+      ]
+    },
+    {
+      "intitule": "Stagiaire Technicien Support & Infrastructure",
+      "type": "Stage",
+      "periode": "2024 (6 semaines)",
+      "structure": "Service Informatique & Maintenance (Île-de-France)",
+      "missions": [
+        "Diagnostic matériel et logiciel, maintenance préventive et curative du parc de postes",
+        "Brassage de baies de serveurs, câblage réseau RJ45 et validation de continuité",
+        "Mise en place de partages réseau sécurisés, imprimantes partagées et rédaction de fiches de procédures",
+        "Assistance directe et accompagnement des utilisateurs"
+      ]
+    },
+    {
+      "intitule": "Employé polyvalent",
+      "type": "Emploi étudiant",
+      "periode": "2025 — Présent",
+      "structure": "E.Leclerc (Vitry-Sur-Seine)",
+      "missions": [
+        "Accueil et relation client, encaissement et travail en équipe dans un environnement dynamique"
+      ]
+    }
+  ],
   "autres_activites": {
     "professionnel": "Hôte de caisse / Employé polyvalent chez E.Leclerc (Vitry) depuis juin 2025 [cite: 530, 531]",
     "interets": "Lutte (en club), musculation, voyages (Russie, Turquie, Pays-Bas, Maroc) [cite: 515-518]"

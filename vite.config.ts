@@ -9,13 +9,6 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
-    proxy: {
-      // Le tunnel vers ton serveur server.js
-      '/api': {
-        target: 'http://localhost:3001',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
+    host: '0.0.0.0',
   },
 });

@@ -5,6 +5,7 @@ import Filiere from './components/Filiere';
 import Parcours from './components/Parcours';
 import Certifications from './components/Certifications';
 import Competences from './components/Competences';
+import Protocoles from './components/Protocoles';
 import Projets from './components/Projets';
 import Veille from './components/Veille';
 import SoftSkills from './components/SoftSkills';
@@ -29,6 +30,7 @@ export default function App() {
         <Parcours />
         <Certifications />
         <Competences />
+        <Protocoles />
         <Projets />
         <Veille />
         <SoftSkills />
