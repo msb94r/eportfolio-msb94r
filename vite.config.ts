@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite'; // On remet le moteur de style !
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     tailwindcss(), // Crucial pour le CSS

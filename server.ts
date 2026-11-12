@@ -191,7 +191,7 @@ ${JSON.stringify(knowledgeBase, null, 2)}
 });
 
 async function start() {
-  const PORT = 3000;
+  const PORT = process.env.RENDER ? (parseInt(process.env.PORT || '10000', 10)) : 3000;
   const isProduction = process.env.NODE_ENV === 'production';
 
   if (isProduction) {
