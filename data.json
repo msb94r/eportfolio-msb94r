@@ -4,7 +4,7 @@
     "statut": "Étudiant en BTS SIO (Services Informatiques aux Organisations)",
     "specialite": "Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)",
     "formation": "Lycée Turgot (Paris 3ème)",
-    "baccalaureat": "Baccalauréat STMG (Lycée Jean Macé, Vitry-Sur-Seine, 2024)",
+    "baccalaureat": "Baccalauréat STMG — Spécialité Mercatique & RH (Lycée Jean Macé, Vitry-Sur-Seine, 2024)",
     "recherche": {
       "alternance": "Contrat d'alternance de 12 mois en administration systèmes, réseaux et cybersécurité pour la rentrée 2026"
     },
@@ -14,7 +14,7 @@
       "telephone": "06.95.13.05.64",
       "linkedin": "https://linkedin.com/in/muslimbays",
       "github": "https://github.com/msb94r",
-      "cv": "/cvmuslim.pdf"
+      "cv": "/assets/aistudio/CV_Muslim_Bayschanov_86a617a0.pdf"
     },
     "langues": {
       "francais": "Courant / Langue de scolarité",
@@ -24,83 +24,146 @@
     }
   },
   "certifications": [
-    "Cisco Networking Academy — Packet Tracer (2024)",
-    "Cisco Networking Academy — Bases Réseaux (2024)",
-    "Cisco Networking Academy — Cybersécurité (2024)"
+    "Cisco Networking Academy — Packet Tracer (2024, badge Credly)",
+    "Cisco Networking Academy — Bases Réseaux / Networking Basics (2024, badge Credly)",
+    "Cisco Networking Academy — Cybersécurité (2024, badge Credly)"
   ],
   "competences_techniques": {
-    "systemes": "Windows Server 2022 (AD DS, GPO, DNS, DHCP, WDS), Linux (Debian, Ubuntu, Kali), Bash, PowerShell, Python",
-    "reseaux": "Cisco Catalyst (Switchs, Routeurs), VLAN 802.1Q, Routage Inter-VLAN, OSPF, BGP, STP/RSTP, IP Helper, Wireshark",
-    "securite": "Pare-feu pfSense, VPN IPsec & WireGuard, Fail2ban, SSH par clé Ed25519, IDS/IPS Suricata, RADIUS/802.1X, Kerberos",
-    "virtualisation_cloud": "Proxmox VE, VMware ESXi/Workstation, Docker, Haute disponibilité, Sauvegardes",
-    "supervision_gestion": "GLPI (ticketing), OCS Inventory, Zabbix (SNMPv3), Gestion de projet (Cahiers des charges, recettes, tests, Gantt)",
-    "developpement": "HTML5, CSS3, JavaScript ES6, React, Tailwind CSS, PHP, SQL, Firebase Firestore"
+    "systemes": {
+      "outils": "Windows Server 2022 (AD DS, GPO, DNS, DHCP, WDS), Clonezilla, Linux (Debian, Ubuntu, Kali), NextCloud, MariaDB, Bash, PowerShell, Python",
+      "savoir_faire": [
+        "Administration de serveurs Linux et Windows (AD, GPO)",
+        "Gestion avancée des droits et habilitations (chmod, chown)",
+        "Déploiement de postes et solutions d'accès (WDS, Clonezilla)",
+        "Mise en place de services collaboratifs et SGBD (NextCloud, MariaDB)",
+        "Automatisation de tâches via scripting (Bash, Python, PowerShell)"
+      ]
+    },
+    "reseaux": {
+      "outils": "Cisco (Switchs Catalyst, Routeurs), Packet Tracer, pfSense, UFW, Wireshark, ntopNG",
+      "savoir_faire": [
+        "Conception de schémas d'architecture et infrastructure",
+        "Déploiement et sécurisation réseau (VLAN 802.1Q, routage OSPF/BGP/RIP, multi-périmètres)",
+        "Configuration d'équipements et pare-feu (pfSense, UFW)",
+        "Analyse de trafic et de trames (Wireshark, ntopNG)",
+        "Connexions distantes sécurisées (SSH, RDP) et mobilité (Wi-Fi)"
+      ]
+    },
+    "cloud_virtualisation": {
+      "outils": "Proxmox VE, VMware, VirtualBox, Docker, Proxmox Backup Server, Barracuda",
+      "savoir_faire": [
+        "Installation et gestion d'hyperviseurs (Proxmox, VMware, VirtualBox) et conteneurs Docker",
+        "Continuité de service, tolérance aux pannes et répartition de charge (HA)",
+        "Déploiement de solutions de sauvegarde (Proxmox Backup, Barracuda)"
+      ]
+    },
+    "cybersecurite": {
+      "outils": "Snort, Suricata, GPG, gocryptfs, SSL/TLS, SSH Ed25519, Fail2ban, RADIUS/802.1X",
+      "savoir_faire": [
+        "Détection et prévention des intrusions réseau (IDS/IPS, Snort, Suricata)",
+        "Mise en place de services d'authentification (Portail captif, annuaires AD/LDAP)",
+        "Opérations de chiffrement (fichiers GPG/gocryptfs, disques, flux SSL/SSH)",
+        "Tests de robustesse, politiques de mots de passe et accès internet sécurisés"
+      ]
+    },
+    "outils_supervision": {
+      "outils": "GLPI, OCS Inventory, Zabbix, Nagios, Puppet, Ansible, KeePass",
+      "savoir_faire": [
+        "Gestion du patrimoine informatique et configurations (GLPI, OCS Inventory, Puppet, Ansible)",
+        "Gestion du cycle de vie des incidents (Ticketing et modules automatiques)",
+        "Supervision disponibilité, sécurité et alertes (Zabbix SNMPv3, Nagios)",
+        "Administration à distance sécurisée de serveurs et coffre-fort KeePass"
+      ]
+    },
+    "gestion_de_projet": {
+      "outils": "Cahier des charges, Cahier des recettes, Cahier des tests, Diagramme de Gantt, SLA, Draw.io, Visio",
+      "savoir_faire": [
+        "Élaboration de cahiers des charges et livrables",
+        "Modélisation de schémas d'architecture fonctionnelle (Draw.io / Visio)",
+        "Suivi des contrats de service (SLA) et contraintes de sécurité",
+        "Planification, gestion des ressources et suivi des délais (Gantt)"
+      ]
+    },
+    "developpement": "HTML5, CSS3, JavaScript ES6, React 19, TypeScript, Tailwind CSS, Vite, PHP, SQL, Firebase Firestore"
   },
-  "protocoles_maitrises": [
-    "OSPF", "BGP", "RIP v2", "802.1Q (VLAN)", "STP / RSTP", "ICMP", "ARP",
-    "SSH", "IPsec (IKEv2)", "WireGuard", "TLS / SSL 1.3", "RADIUS / 802.1X", "Kerberos v5",
-    "DNS / DNSSEC", "DHCP", "LDAP / LDAPS", "NTP", "SNMP v3", "SMB v3",
-    "TCP", "UDP", "HTTP / HTTPS", "SFTP", "SMTP / SMTPS"
-  ],
   "projets_et_realisations": {
     "Chicken_Point": {
       "annee": "2025",
       "concept": "Site vitrine responsive pour un restaurant rapide à Aubervilliers (menus, ScrollSpy, commande Uber Eats, formulaire Formspree).",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "livrables": ["Cahier des charges", "Cahier des recettes", "Cahier des tests", "Diagramme de Gantt"]
     },
     "E_Portfolio": {
       "annee": "2026",
-      "concept": "Portfolio interactif BTS SIO SISR avec référentiel de 24 protocoles, simulateur d'incidents en terminal CLI (CyberLab) et assistant IA.",
+      "concept": "Portfolio interactif BTS SIO SISR avec référentiel de 24 protocoles, simulateur d'incidents en terminal CLI (CyberLab), visionneuse inline et assistant IA.",
       "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "Express"]
     },
     "Rituals_Du_Monde": {
       "annee": "2026",
       "concept": "Plateforme Spa & Bien-être avec système de réservation en 3 étapes, boutique et architecture IA hybride (Mistral Cloud + Failover local Ollama + Firebase Firestore).",
-      "technologies": ["HTML", "CSS", "JavaScript", "Firebase", "IA Hybride"]
+      "technologies": ["HTML", "CSS", "JavaScript", "Firebase Firestore", "IA Hybride (Mistral + Ollama)"],
+      "livrables": ["Cahier des charges", "Cahier des recettes", "Cahier des tests", "Diagramme de Gantt"]
     },
     "Shop_Ton_Auto": {
       "annee": "2026",
-      "concept": "Plateforme de concession automobile avec filtrage dynamique des véhicules, estimation de reprise et dashboard CRUD sécurisé.",
-      "technologies": ["HTML", "CSS", "JavaScript"]
+      "concept": "Plateforme de concession automobile avec filtrage dynamique des véhicules (budget, carburant, année), estimation de reprise et dashboard CRUD sécurisé.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "livrables": ["Cahier des charges", "Cahier des recettes", "Cahier des tests", "Diagramme de Gantt"]
     },
     "Infrastructure_Active_Directory_WDS": {
       "annee": "2026",
-      "concept": "Déploiement d'une infrastructure Windows Server 2022 complète : contrôleur de domaine AD DS, GPO, DNS, DHCP et déploiement automatisé WDS.",
+      "concept": "Déploiement d'une infrastructure Windows Server 2022 complète : contrôleur de domaine AD DS, GPO, DNS, DHCP et déploiement automatisé de postes via WDS.",
       "technologies": ["Windows Server", "Active Directory", "GPO", "WDS"]
     },
     "Supervision_GLPI_Zabbix": {
       "annee": "2026",
-      "concept": "Plateforme d'inventaire automatisé OCS Inventory, gestion de tickets d'incidents GLPI et supervision temps réel Zabbix.",
+      "concept": "Plateforme d'inventaire automatisé OCS Inventory, gestion de tickets d'incidents N1/N2 GLPI et supervision temps réel Zabbix (SNMPv3).",
       "technologies": ["GLPI", "Zabbix", "OCS Inventory", "Linux"]
     },
     "Securisation_Reseau_pfSense": {
       "annee": "2026",
-      "concept": "Architecture réseau sécurisée multi-zones : pare-feu pfSense, segmentation inter-VLAN, portail captif et tunnels VPN chiffrés.",
+      "concept": "Architecture réseau sécurisée multi-zones : pare-feu pfSense, segmentation inter-VLAN, portail captif et tunnels VPN IPsec/OpenVPN chiffrés.",
       "technologies": ["pfSense", "Cisco", "VLAN", "VPN"]
     }
   },
   "veille_technologique": {
     "sujet": "L'apport de l'Intelligence Artificielle dans la cyberdéfense proactive et l'anticipation des menaces.",
-    "problematique": "Comment passer d'une posture de sécurité purement réactive à une cyberdéfense prédictive et automatisée ?",
+    "problematique": "Comment passer d'une posture de sécurité purement réactive à une cyberdéfense prédictive et automatisée face à des attaques de plus en plus sophistiquées ?",
     "axes_de_recherche": [
-      "1. IA Prédictive & Analyse Comportementale (UEBA) pour contrer les attaques zero-day",
-      "2. Automatisation des SOC & Copilotes IA (réduction du MTTR et triage des alertes)",
-      "3. IA Défensive vs IA Offensive face aux malwares polymorphes"
+      {
+        "axe": "1. IA Prédictive & Analyse Comportementale (UEBA)",
+        "detail": "Utilisation du Machine Learning pour établir une baseline des flux et détecter les déviations anormales afin de contrer les attaques zero-day."
+      },
+      {
+        "axe": "2. Automatisation des SOC & Copilotes IA (SOAR)",
+        "detail": "Triage assisté des alertes par LLM et playbooks SOAR réduisant drastiquement le MTTR (temps moyen de réponse) et la fatigue des analystes."
+      },
+      {
+        "axe": "3. IA Défensive vs IA Offensive",
+        "detail": "Neutralisation en quelques millisecondes des malwares polymorphes et rançongiciels autonomes conçus par des attaquants."
+      }
     ],
-    "outils": "Feedly (flux RSS ANSSI / CERT-FR, LeMagIT, ZDNet), Google Alerts"
+    "articles_suivis": [
+      "Comment l'IA prédictive anticipe les attaques zero-day et les menaces avancées (ANSSI / CERT-FR, Nov. 2024)",
+      "Les SOC de nouvelle génération boostés par le Machine Learning et les LLM (LeMagIT Cyber, Janv. 2025)",
+      "L'automatisation de la réponse aux incidents (SOAR) face aux malwares polymorphes (ZDNet Sécurité, Mars 2025)"
+    ],
+    "outils": "Feedly (flux RSS ANSSI, CERT-FR, LeMagIT, ZDNet), Google Alerts, newsletters Gartner & IBM Security"
   },
   "experiences_professionnelles": [
     {
       "intitule": "Stagiaire Administrateur Systèmes & Réseaux",
       "type": "Stage (2ème année)",
       "periode": "Mai 2025 — Juillet 2025",
+      "structure": "DSI / Entreprise Partenaire",
       "missions": "Administration serveurs Windows/Linux, intégration Active Directory (GPO), segmentation VLAN Cisco, support N1/N2 et inventaire GLPI/OCS."
     },
     {
       "intitule": "Stagiaire Technicien Support & Infrastructure",
       "type": "Stage (1ère année)",
       "periode": "2024 (6 semaines)",
-      "missions": "Maintenance préventive et curative du parc informatique, brassage de baies et câblage RJ45, déploiement de partages réseau sécurisés."
+      "structure": "Service Informatique & Maintenance",
+      "missions": "Maintenance préventive et curative du parc informatique, brassage de baies et câblage RJ45, support N1/N2 et déploiement de partages réseau sécurisés."
     },
     {
       "intitule": "Employé polyvalent",
@@ -110,7 +173,10 @@
       "missions": "Relation client, gestion de caisse, organisation et travail en équipe."
     }
   ],
+  "cyberlab_simulateur": {
+    "description": "Console interactive de résolution de 6 tickets d'incidents SISR (Panne DNS/AD, Tempête Broadcast STP, Brute Force SSH, Relais DHCP inter-VLAN, Saturation LVM Zabbix, Détection C2 Suricata) + jeu Memory Tech."
+  },
   "autres_activites": {
-    "interets": "Lutte (en club), musculation, veille cybersécurité, voyages (Russie, Turquie, Pays-Bas, Maroc)"
+    "sports_et_loisirs": "Lutte (en club), musculation, veille cybersécurité, voyages (Russie, Turquie, Pays-Bas, Maroc)"
   }
 }

@@ -24,7 +24,7 @@ export default function Hero() {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
-            <a href="/cvmuslim.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors">
+            <a href="/assets/aistudio/CV_Muslim_Bayschanov_86a617a0.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors">
               {t('hero.downloadCv')}
             </a>
             <a href="#contact" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full border border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white font-medium hover:bg-zinc-50 dark:hover:bg-white/5 transition-colors">

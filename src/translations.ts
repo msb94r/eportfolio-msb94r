@@ -250,7 +250,7 @@ export const translations = {
     },
     hero: {
       subtitle: "IT Student (BTS SIO SISR). Specialized in system administration, network security, and cloud computing.",
-      downloadCv: "Download CV",
+      downloadCv: "View CV",
       contactMe: "Contact Me"
     },
     filiere: {

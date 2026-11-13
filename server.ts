@@ -4,7 +4,8 @@ import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
-import { generateSmartReply } from './src/services/mistralService';
+import { generateSmartReply } from './src/services/chatbotKnowledge.js';
+import { PROTOCOLS_DATA } from './src/data/protocolsList.js';
 
 dotenv.config();
 
@@ -20,7 +21,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Load knowledge base from data.json
+// Load knowledge base from data.json + full 24 protocol sheets
 let knowledgeBase: any = {};
 try {
   const dataPath = path.resolve(process.cwd(), 'data.json');
@@ -30,6 +31,7 @@ try {
 } catch (err) {
   console.warn('⚠️ Could not load data.json:', err);
 }
+knowledgeBase.protocoles_detailles = PROTOCOLS_DATA;
 
 app.post('/api/chat', async (req: Request, res: Response) => {
   try {
@@ -40,19 +42,19 @@ app.post('/api/chat', async (req: Request, res: Response) => {
       ? [{ role: 'user', content: rawHistory }]
       : [];
 
-    const lastUserMessage = [...history].reverse().find(m => m.role === 'user')?.content || '';
-
     const systemPrompt = `
 Tu es l'assistant personnel (IA) du portfolio de Muslim Bayschanov (étudiant en BTS SIO option SISR).
 
-CONSIGNES DE FORMATAGE ET DE TON :
-- Réponds en français, de manière professionnelle, claire et synthétique.
+CONSIGNES DE PRÉCISION ET DE FORMATAGE :
+- Réponds en français, de manière professionnelle, structurée et **précise** sur le sujet exact demandé.
+- NE REGROUPE PAS plusieurs sujets non demandés : si l'utilisateur pose une question sur UN protocole (ex: OSPF, Kerberos), UN outil (ex: Proxmox, Zabbix), UN projet ou UN axe de veille, réponds en détail uniquement sur cet élément sans diluer la réponse avec d'autres rubriques.
 - Utilise des listes à puces (commençant par "• ") et du **gras** pour mettre en valeur les points clés.
-- Ne cite JAMAIS de références brutes ou de fichiers internes.
+- Tient compte de l'historique pour les questions de suivi courtes ("et la sécurité ?", "quel port ?", etc.).
+- Ne cite JAMAIS de noms de fichiers internes ou de variables JSON.
 - Appuie-toi uniquement sur les informations vérifiées ci-dessous :
 
 BASE DE CONNAISSANCES :
-${JSON.stringify(knowledgeBase, null, 2)}
+${JSON.stringify(knowledgeBase)}
     `.trim();
 
     // 1. Try Gemini API if GEMINI_API_KEY is present
@@ -110,8 +112,8 @@ ${JSON.stringify(knowledgeBase, null, 2)}
       }
     }
 
-    // 3. Knowledge base smart fallback responder
-    const fallbackReply = generateSmartReply(lastUserMessage);
+    // 3. Granular context-aware knowledge base fallback responder
+    const fallbackReply = generateSmartReply(history);
     return res.json({ reply: fallbackReply });
   } catch (error: any) {
     console.error('❌ Server error in /api/chat:', error?.message || error);

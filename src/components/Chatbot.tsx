@@ -20,15 +20,72 @@ type Message = {
 };
 
 const WELCOME_MESSAGE =
-  "Bonjour ! Je suis l'assistant virtuel de **Muslim Bayschanov**.\n\nPosez-moi vos questions sur son **parcours BTS SIO SISR**, ses **7 projets**, ses **compétences & protocoles**, ou sa **recherche d'alternance 2026** — ou utilisez les suggestions rapides ci-dessous.";
+  "Bonjour ! Je suis l'assistant virtuel de **Muslim Bayschanov**.\n\nPosez-moi des questions **précises et détaillées** sur :\n• Un **protocole** précis (*OSPF, Kerberos, WireGuard, SNMPv3...*)\n• Une **compétence ou un outil** (*Proxmox, Suricata, Zabbix, GPO...*)\n• Un **projet** précis (*Rituels du Monde, pfSense, Active Directory...*)\n• Un **axe de veille** (*UEBA, SOAR, ANSSI*), un **stage** ou son **alternance 2026**.";
 
-const QUICK_QUESTIONS = [
-  { label: 'Ses 7 projets', prompt: 'Quels sont les projets réalisés par Muslim ?' },
-  { label: 'Stages & Parcours', prompt: 'Parle-moi de ses stages et de son parcours.' },
-  { label: 'Protocoles & Compétences', prompt: 'Quelles compétences et protocoles maîtrise-t-il ?' },
-  { label: 'Veille Cyber', prompt: 'Quel est le sujet de sa veille technologique ?' },
-  { label: 'Alternance & CV', prompt: 'Comment le contacter pour une alternance en 2026 ?' },
+const INITIAL_SUGGESTIONS = [
+  { label: 'Explique OSPF', prompt: 'Explique le protocole OSPF en détail.' },
+  { label: 'TCP vs UDP', prompt: 'Quelle est la différence entre TCP et UDP ?' },
+  { label: 'Proxmox & HA', prompt: 'Quelles sont ses compétences sur Proxmox et la haute disponibilité ?' },
+  { label: 'Rituels du Monde', prompt: 'Explique en détail le projet Rituels du Monde.' },
+  { label: 'Veille UEBA', prompt: 'Quel est le rôle de l’UEBA dans sa veille technologique ?' },
+  { label: 'Stage 2ème année', prompt: 'Quelles ont été ses missions lors du stage de 2ème année ?' },
+  { label: 'Alternance & CV', prompt: 'Est-il disponible pour une alternance en 2026 ?' },
 ];
+
+// Suggestions dynamiques non regroupées adaptées au dernier sujet abordé
+function getDynamicSuggestions(messages: Message[]): Array<{ label: string; prompt: string }> {
+  if (messages.length <= 1) return INITIAL_SUGGESTIONS;
+
+  const lastAssistant = [...messages].reverse().find((m) => m.role === 'assistant')?.content.toLowerCase() || '';
+
+  if (/\bprotocole\b/.test(lastAssistant) || lastAssistant.includes('durcissement —') || lastAssistant.includes('port, couche') || lastAssistant.includes('mise en pratique de') || lastAssistant.includes('couche osi') || lastAssistant.includes('comparaison tcp')) {
+    return [
+      { label: 'Et la sécurité ?', prompt: 'Et comment le sécuriser ?' },
+      { label: 'IPsec vs WireGuard', prompt: 'Compare IPsec et WireGuard.' },
+      { label: 'Explique Kerberos', prompt: 'Explique le protocole Kerberos en détail.' },
+      { label: 'Explique SNMP v3', prompt: 'Comment utilise-t-il SNMP v3 ?' },
+      { label: 'Rituels du Monde', prompt: 'Explique en détail le projet Rituels du Monde.' },
+    ];
+  }
+
+  if (/\bcompétence\b/.test(lastAssistant) || /\b(proxmox|suricata|zabbix|puppet)\b/.test(lastAssistant)) {
+    return [
+      { label: 'Outils Puppet/Ansible', prompt: 'Que maîtrise-t-il sur Puppet, Ansible et KeePass ?' },
+      { label: 'Sécurité Suricata/GPG', prompt: 'Détaille ses compétences en cybersécurité (Snort, Suricata, GPG).' },
+      { label: 'Réseau Cisco/Wireshark', prompt: 'Quelles sont ses compétences Cisco et Wireshark ?' },
+      { label: 'Supervision GLPI & Zabbix', prompt: 'Explique le projet Supervision GLPI & Zabbix.' },
+    ];
+  }
+
+  if (lastAssistant.includes('projet —') || /\blivrables\b/.test(lastAssistant)) {
+    return [
+      { label: 'Cahiers & Gantt', prompt: 'Quels livrables et diagrammes de Gantt accompagnent ses projets ?' },
+      { label: 'Projet pfSense', prompt: 'Détaille le projet Sécurisation Réseau & Pare-feu pfSense.' },
+      { label: 'Infra Active Directory', prompt: 'Détaille le projet Infrastructure Active Directory & WDS.' },
+      { label: 'Shop Ton Auto', prompt: 'Comment fonctionne le projet Shop Ton Auto ?' },
+    ];
+  }
+
+  if (/\b(veille|ueba|soar|feedly|mttr)\b/.test(lastAssistant)) {
+    return [
+      { label: 'Axe 2 : SOC & SOAR', prompt: 'Explique l’axe 2 sur les SOC, Copilotes IA et SOAR.' },
+      { label: 'Axe 3 : IA vs IA', prompt: 'Explique l’axe 3 sur les malwares polymorphes.' },
+      { label: 'Outils Feedly & ANSSI', prompt: 'Quels outils et articles utilise-t-il pour sa veille ?' },
+      { label: 'Problématique Veille', prompt: 'Quelle est la problématique exacte de sa veille ?' },
+    ];
+  }
+
+  if (/\b(stage|parcours|turgot|e\.leclerc)\b/.test(lastAssistant)) {
+    return [
+      { label: 'Stage 1ère année', prompt: 'Quelles ont été ses missions au stage de 1ère année ?' },
+      { label: 'Certifications Cisco', prompt: 'Quelles certifications Cisco a-t-il obtenues ?' },
+      { label: 'Tableau de synthèse', prompt: 'Où consulter son tableau de synthèse BTS SIO ?' },
+      { label: 'Alternance 2026', prompt: 'Comment le contacter pour une alternance ?' },
+    ];
+  }
+
+  return INITIAL_SUGGESTIONS;
+}
 
 // Rendu propre du gras (**texte**) et des puces sans dépendance externe
 function FormattedMessage({ content }: { content: string }) {
@@ -81,25 +138,46 @@ function FormattedMessage({ content }: { content: string }) {
   );
 }
 
-// Boutons d'action contextuels selon le contenu de la réponse
+// Boutons d'action contextuels selon le contenu de la réponse (strictement par mots entiers)
 function getContextualActions(content: string): Array<{ label: string; href: string; external?: boolean }> {
   const lower = content.toLowerCase();
   const actions: Array<{ label: string; href: string; external?: boolean }> = [];
 
-  if (lower.includes('cv') || lower.includes('alternance') || lower.includes('baysmuslim@gmail.com')) {
-    actions.push({ label: 'Consulter le CV', href: '/cvmuslim.pdf', external: true });
+  if (/\b(cv|alternance)\b/.test(lower) || lower.includes('baysmuslim@gmail.com')) {
+    actions.push({ label: 'Consulter le CV', href: '/assets/aistudio/CV_Muslim_Bayschanov_86a617a0.pdf', external: true });
     actions.push({ label: 'Aller au Contact', href: '#contact' });
-  } else if (lower.includes('projet') || lower.includes('rituels') || lower.includes('shop ton auto') || lower.includes('active directory')) {
-    actions.push({ label: 'Voir les Projets', href: '#projets' });
-  } else if (lower.includes('protocole') || lower.includes('ospf') || lower.includes('wireguard')) {
+    return actions;
+  }
+  if (lower.includes('tableau de synthèse') || /\bxlsx\b/.test(lower)) {
+    actions.push({ label: 'Voir le Tableau de Synthèse', href: '#tableau-synthese' });
+    return actions;
+  }
+  if (/\bprotocoles?\b/.test(lower) || lower.includes('couche osi') || lower.includes('durcissement —') || lower.includes('port, couche') || lower.includes('mise en pratique de') || /\bcomparaison (tcp|ipsec|ospf)\b/.test(lower) || /\bdifférence (ldap|sftp|ssh)\b/.test(lower)) {
     actions.push({ label: 'Explorer les Protocoles', href: '#protocoles' });
-  } else if (lower.includes('veille') || lower.includes('ueba') || lower.includes('soar')) {
+  }
+  if (lower.includes('projet —') || /\blivrables\b/.test(lower) || lower.includes('rituels du monde') || lower.includes('shop ton auto') || lower.includes('chicken point') || lower.includes('les 7 projets')) {
+    actions.push({ label: 'Voir les Projets', href: '#projets' });
+  }
+  if (/\b(veille|ueba|soar|feedly|mttr)\b/.test(lower)) {
     actions.push({ label: 'Voir la Veille', href: '#veille' });
-  } else if (lower.includes('cyberlab') || lower.includes('simulateur')) {
+  }
+  if (/\b(compétence|compétences|proxmox|suricata|puppet|zabbix|gestion de projet)\b/.test(lower)) {
+    actions.push({ label: 'Voir les Compétences', href: '#compétences' });
+  }
+  if (/\b(stage|stages|e\.leclerc|baccalauréat)\b/.test(lower)) {
+    actions.push({ label: 'Voir le Parcours', href: '#parcours' });
+  }
+  if (/\b(certification|certifications|credly)\b/.test(lower)) {
+    actions.push({ label: 'Voir les Certifications', href: '#certifications' });
+  }
+  if (/\bsisr\b/.test(lower) && /\bslam\b/.test(lower)) {
+    actions.push({ label: 'Voir la Filière SIO', href: '#filière' });
+  }
+  if (/\b(cyberlab|simulateur)\b/.test(lower) || lower.includes('memory tech')) {
     actions.push({ label: 'Ouvrir CyberLab', href: '#soft-skills' });
   }
 
-  return actions;
+  return actions.slice(0, 2);
 }
 
 export default function Chatbot() {
@@ -310,9 +388,9 @@ export default function Chatbot() {
               )}
             </div>
 
-            {/* Suggestions rapides */}
+            {/* Suggestions rapides dynamiques */}
             <div className="px-3 py-2 bg-zinc-900/70 border-t border-white/5 flex items-center gap-1.5 overflow-x-auto scrollbar-none">
-              {QUICK_QUESTIONS.map((q) => (
+              {getDynamicSuggestions(messages).map((q) => (
                 <button
                   key={q.label}
                   type="button"
