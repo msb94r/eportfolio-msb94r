@@ -14,7 +14,7 @@ export const translations = {
     },
     hero: {
       subtitle: "Étudiant en BTS SIO (SISR). Spécialisé dans l'administration système, la sécurité des réseaux et le cloud computing.",
-      downloadCv: "Télécharger le CV",
+      downloadCv: "Consulter le CV",
       contactMe: "Me contacter"
     },
     filiere: {

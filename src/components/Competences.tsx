@@ -128,7 +128,7 @@ export default function Competences() {
           transition={{ delay: 0.4 }}
         >
           <a 
-            href="tableausynthese.pdf" 
+            href="/tableausynthese.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-bold text-sm hover:scale-105 transition-transform shadow-lg shadow-zinc-900/20 dark:shadow-white/10"
@@ -137,8 +137,7 @@ export default function Competences() {
             {t('competences.pdf')}
           </a>
           <a 
-            href="tableaudesynthese.xlsx" 
-            download
+            href="/?doc=synthese-xlsx" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 rounded-full bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white border border-zinc-200 dark:border-white/10 font-bold text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm"

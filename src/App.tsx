@@ -11,14 +11,20 @@ import Veille from './components/Veille';
 import SoftSkills from './components/SoftSkills';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
+import DocumentViewer from './components/DocumentViewer';
 import { useLanguage } from './context/LanguageContext';
 
 export default function App() {
   const { t } = useLanguage();
+  const docParam = new URLSearchParams(window.location.search).get('doc');
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
   }, []);
+
+  if (docParam) {
+    return <DocumentViewer docKey={docParam} />;
+  }
 
   return (
     <div className="min-h-screen font-sans selection:bg-black/10 dark:selection:bg-white/20 transition-colors duration-500">

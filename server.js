@@ -13,6 +13,15 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.json());
 
+// Force inline display for PDF files so browsers open them in a new tab instead of downloading
+app.use((req, res, next) => {
+  if (req.path.toLowerCase().endsWith('.pdf')) {
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'inline');
+  }
+  next();
+});
+
 // Load knowledge base from data.json
 let knowledgeBase = {};
 try {
@@ -52,7 +61,7 @@ function generateSmartReply(userPrompt) {
   }
 
   if (/(alternance|recrut|embauch|dispo|contrat|contact|email|mail|tel|telephone|numero|linkedin|github|cv|curriculum|adresse|vitry|ou habite|localisation|joindre)/.test(q)) {
-    return "**Coordonnées & Recherche d'Alternance — Muslim Bayschanov :**\n\n• **Objectif** : Contrat d'alternance de **12 mois** (rentrée 2026) en Administration Systèmes, Réseaux ou Cybersécurité.\n• **Formation** : BTS SIO option SISR (Lycée Turgot, Paris 3ème).\n• **Localisation** : Vitry-Sur-Seine (Île-de-France).\n• **Email** : baysmuslim@gmail.com\n• **Téléphone** : 06.95.13.05.64\n• **LinkedIn** : linkedin.com/in/muslimbays\n\nVous pouvez télécharger son **CV complet** directement depuis le bouton ci-dessous ou en haut de la page.";
+    return "**Coordonnées & Recherche d'Alternance — Muslim Bayschanov :**\n\n• **Objectif** : Contrat d'alternance de **12 mois** (rentrée 2026) en Administration Systèmes, Réseaux ou Cybersécurité.\n• **Formation** : BTS SIO option SISR (Lycée Turgot, Paris 3ème).\n• **Localisation** : Vitry-Sur-Seine (Île-de-France).\n• **Email** : baysmuslim@gmail.com\n• **Téléphone** : 06.95.13.05.64\n• **LinkedIn** : linkedin.com/in/muslimbays\n\nVous pouvez consulter son **CV complet** directement depuis le bouton ci-dessous ou en haut de la page.";
   }
 
   if (/(rituel|ritual|spa|failover|ollama|firestore)/.test(q)) {

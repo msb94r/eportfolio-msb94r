@@ -87,7 +87,7 @@ function getContextualActions(content: string): Array<{ label: string; href: str
   const actions: Array<{ label: string; href: string; external?: boolean }> = [];
 
   if (lower.includes('cv') || lower.includes('alternance') || lower.includes('baysmuslim@gmail.com')) {
-    actions.push({ label: 'Télécharger le CV', href: '/cvmuslim.pdf', external: true });
+    actions.push({ label: 'Consulter le CV', href: '/cvmuslim.pdf', external: true });
     actions.push({ label: 'Aller au Contact', href: '#contact' });
   } else if (lower.includes('projet') || lower.includes('rituels') || lower.includes('shop ton auto') || lower.includes('active directory')) {
     actions.push({ label: 'Voir les Projets', href: '#projets' });

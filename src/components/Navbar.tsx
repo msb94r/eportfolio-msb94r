@@ -35,7 +35,6 @@ export default function Navbar() {
     { name: t('nav.protocoles'), href: '#protocoles' },
     { name: t('nav.projets'), href: '#projets' },
     { name: t('nav.veille'), href: '#veille' },
-    { name: 'CyberLab', href: '#soft-skills' },
     { name: t('nav.synthese'), href: '#tableau-synthese' },
     { name: t('nav.contact'), href: '#contact' }
   ];

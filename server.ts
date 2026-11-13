@@ -11,6 +11,15 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+// Force inline display for PDF files so browsers open them in a new tab instead of downloading
+app.use((req, res, next) => {
+  if (req.path.toLowerCase().endsWith('.pdf')) {
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'inline');
+  }
+  next();
+});
+
 // Load knowledge base from data.json
 let knowledgeBase: any = {};
 try {
