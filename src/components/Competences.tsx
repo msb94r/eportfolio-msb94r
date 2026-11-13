@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Monitor, Network, Cloud, Lock, Wrench, User, FileText, FileSpreadsheet } from 'lucide-react';
+import { Monitor, Network, Cloud, Lock, Wrench, User, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Competences() {
@@ -118,32 +118,23 @@ export default function Competences() {
           ))}
         </div>
 
-        {/* Boutons Tableau de synthèse */}
+        {/* Bouton Tableau de synthèse (PDF uniquement) */}
         <motion.div 
           id="tableau-synthese"
-          className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 scroll-mt-32"
+          className="mt-16 flex items-center justify-center scroll-mt-32"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
           <a 
-            href="/tableausynthese.pdf" 
+            href="/assets/aistudio/tableausyntheseori_bedd6460.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-bold text-sm hover:scale-105 transition-transform shadow-lg shadow-zinc-900/20 dark:shadow-white/10"
           >
             <FileText size={18} />
             {t('competences.pdf')}
-          </a>
-          <a 
-            href="/?doc=synthese-xlsx" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-8 py-4 rounded-full bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white border border-zinc-200 dark:border-white/10 font-bold text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors shadow-sm"
-          >
-            <FileSpreadsheet size={18} />
-            {t('competences.xlsx')}
           </a>
         </motion.div>
       </div>

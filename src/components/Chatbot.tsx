@@ -148,8 +148,9 @@ function getContextualActions(content: string): Array<{ label: string; href: str
     actions.push({ label: 'Aller au Contact', href: '#contact' });
     return actions;
   }
-  if (lower.includes('tableau de synthèse') || /\bxlsx\b/.test(lower)) {
-    actions.push({ label: 'Voir le Tableau de Synthèse', href: '#tableau-synthese' });
+  if (lower.includes('tableau de synthèse')) {
+    actions.push({ label: 'Consulter le Tableau (PDF)', href: '/assets/aistudio/tableausyntheseori_bedd6460.pdf', external: true });
+    actions.push({ label: 'Voir la section', href: '#tableau-synthese' });
     return actions;
   }
   if (/\bprotocoles?\b/.test(lower) || lower.includes('couche osi') || lower.includes('durcissement —') || lower.includes('port, couche') || lower.includes('mise en pratique de') || /\bcomparaison (tcp|ipsec|ospf)\b/.test(lower) || /\bdifférence (ldap|sftp|ssh)\b/.test(lower)) {
@@ -165,6 +166,13 @@ function getContextualActions(content: string): Array<{ label: string; href: str
     actions.push({ label: 'Voir les Compétences', href: '#compétences' });
   }
   if (/\b(stage|stages|e\.leclerc|baccalauréat)\b/.test(lower)) {
+    if (lower.includes('1ère année') || lower.includes('rapport de stage')) {
+      actions.push({
+        label: 'Rapport 1ère année (PDF)',
+        href: '/assets/aistudio/Rapport_de_Stage_BTS_SIO_SISR_-_E.Leclerc_0446e07b.pdf',
+        external: true,
+      });
+    }
     actions.push({ label: 'Voir le Parcours', href: '#parcours' });
   }
   if (/\b(certification|certifications|credly)\b/.test(lower)) {

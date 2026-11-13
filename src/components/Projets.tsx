@@ -276,7 +276,7 @@ export default function Projets() {
           transition={{ delay: 0.2 }}
         >
           <a
-            href="/rapport-stage-1ere-annee.pdf"
+            href="/assets/aistudio/Rapport_de_Stage_BTS_SIO_SISR_-_E.Leclerc_0446e07b.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-zinc-900 font-semibold text-sm border border-zinc-200/90 shadow-sm hover:bg-zinc-100 hover:shadow-md transition-all group"

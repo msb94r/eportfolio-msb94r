@@ -324,7 +324,7 @@ const PROJECTS_KNOWLEDGE = [
     reply: () =>
       `**Projet — E-Portfolio BTS SIO SISR (2026) :**\n\n` +
       `• **Stack technique** : Application SPA **React 19 + TypeScript + Tailwind CSS + Vite**, servie par un backend **Express (Node.js)**.\n` +
-      `• **Modules intégrés** : Référentiel technique de **24 protocoles**, simulateur interactif d'incidents en terminal **CyberLab**, visionneuse de documents inline (PDF/XLSX) et cet assistant conversationnel.`
+      `• **Modules intégrés** : Référentiel technique de **24 protocoles**, simulateur interactif d'incidents en terminal **CyberLab**, ouverture directe des documents PDF et cet assistant conversationnel.`
   },
   {
     id: 'proj_ad_wds',
@@ -459,11 +459,11 @@ function matchParcoursOrProfileSpecific(q) {
   }
 
   // Tableau de synthèse / Epreuves E4 E5
-  if (/(tableau de synthese|synthese|xlsx|epreuve|e4|e5)/.test(q)) {
+  if (/(tableau de synthese|synthese|epreuve|e4|e5)/.test(q)) {
     return (
       `**Tableau de Synthèse BTS SIO & Épreuves E4 / E5 :**\n\n` +
       `• **Épreuves E4 / E5** : Évaluation officielle de la mise à disposition des services informatiques et de l'administration des infrastructures SISR.\n` +
-      `• **Formats disponibles** : Le **Tableau de Synthèse officiel** est consultable directement en **PDF** ou en vue web **XLSX** (sans téléchargement forcé) dans la section **Compétences**.`
+      `• **Format disponible** : Le **Tableau de Synthèse officiel (PDF)** s'ouvre directement dans un nouvel onglet (sans téléchargement forcé) depuis la section **Compétences** ou le bouton ci-dessous.`
     );
   }
 
