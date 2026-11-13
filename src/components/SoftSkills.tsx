@@ -338,7 +338,8 @@ export default function SoftSkills() {
   const [hasRunDiagnostic, setHasRunDiagnostic] = useState(false);
   const [cliInput, setCliInput] = useState('');
   
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const terminalContainerRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
 
   const [terminalHistory, setTerminalHistory] = useState<string[]>([
     'CyberLab SISR v3.0 [Pro Edition] initialized.',
@@ -348,9 +349,15 @@ export default function SoftSkills() {
 
   const currentIncident = INCIDENTS_DATA[currentIncidentIndex];
 
-  // Auto-scroll terminal to bottom
+  // Auto-scroll uniquement à l'intérieur de la fenêtre du terminal (sans faire défiler toute la page)
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (terminalContainerRef.current) {
+      terminalContainerRef.current.scrollTop = terminalContainerRef.current.scrollHeight;
+    }
   }, [terminalHistory]);
 
   // Exécution du diagnostic préalable
@@ -793,7 +800,7 @@ export default function SoftSkills() {
                     </div>
 
                     {/* Historique du terminal */}
-                    <div className="space-y-2 text-zinc-400 max-h-72 overflow-y-auto scrollbar-none pr-1">
+                    <div ref={terminalContainerRef} className="space-y-2 text-zinc-400 max-h-72 overflow-y-auto scrollbar-none pr-1">
                       {terminalHistory.map((line, i) => (
                         <div 
                           key={i} 
@@ -812,7 +819,6 @@ export default function SoftSkills() {
                           {line}
                         </div>
                       ))}
-                      <div ref={terminalEndRef} />
                     </div>
                   </div>
 

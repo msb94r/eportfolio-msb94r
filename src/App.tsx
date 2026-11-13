@@ -37,7 +37,7 @@ export default function App() {
         <Contact />
       </main>
 
-      <footer className="py-12 text-center text-zinc-500 dark:text-zinc-600 text-sm border-t border-zinc-200 dark:border-white/5 transition-colors duration-500">
+      <footer className="py-12 text-center text-zinc-400 text-sm border-t border-white/10 transition-colors duration-500">
         <p>© {new Date().getFullYear()} Muslim Bayschanov. {t('footer.rights')}</p>
       </footer>
 

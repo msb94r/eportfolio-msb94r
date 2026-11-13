@@ -2,129 +2,115 @@
   "profil_professionnel": {
     "identite": "Muslim Bayschanov",
     "statut": "Étudiant en BTS SIO (Services Informatiques aux Organisations)",
-    "specialite": "Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) [cite: 413, 498, 520]",
-    "formation": "Lycée Turgot (Paris 3ème) [cite: 500, 520]",
+    "specialite": "Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)",
+    "formation": "Lycée Turgot (Paris 3ème)",
+    "baccalaureat": "Baccalauréat STMG (Lycée Jean Macé, Vitry-Sur-Seine, 2024)",
     "recherche": {
-      "stage": "Administration Systèmes, Réseaux & Cybersécurité (18/05 au 03/07/2025) [cite: 502]",
-      "alternance": "Contrat de 12 mois pour la rentrée 2026"
+      "alternance": "Contrat d'alternance de 12 mois en administration systèmes, réseaux et cybersécurité pour la rentrée 2026"
     },
     "contact": {
-      "ville": "Vitry-Sur-Seine [cite: 505]",
-      "email": "baysmuslim@gmail.com [cite: 505]",
-      "telephone": "06.95.13.05.64 [cite: 505]",
-      "linkedin": "linkedin.com/in/muslimbays [cite: 505]",
-      "portfolio": "https://msb94r.github.io/eportfolio.msb94r/ [cite: 501, 537]"
+      "ville": "Vitry-Sur-Seine (Île-de-France)",
+      "email": "baysmuslim@gmail.com",
+      "telephone": "06.95.13.05.64",
+      "linkedin": "https://linkedin.com/in/muslimbays",
+      "github": "https://github.com/msb94r",
+      "cv": "/cvmuslim.pdf"
     },
     "langues": {
-      "maternel": "Tchétchène [cite: 513]",
-      "russe": "Niveau B2 [cite: 513]",
-      "anglais": "Niveau B1 [cite: 512]"
+      "francais": "Courant / Langue de scolarité",
+      "tchetchene": "Langue maternelle",
+      "russe": "Niveau B2",
+      "anglais": "Niveau B1"
     }
   },
+  "certifications": [
+    "Cisco Networking Academy — Packet Tracer (2024)",
+    "Cisco Networking Academy — Bases Réseaux (2024)",
+    "Cisco Networking Academy — Cybersécurité (2024)"
+  ],
   "competences_techniques": {
-    "systemes_reseaux": "Windows & Linux, Virtualisation (VMware), Configuration Cisco (Switch, VLAN, Routage), OCS Inventory, GLPI [cite: 501, 509, 510]",
-    "developpement": "HTML5, CSS3, JavaScript ES6 (Modules), PHP, Python, SQL [cite: 95, 226, 335, 510]",
-    "expertises_ia": "Architecture IA Hybride (Mistral/Ollama), Modèles SLM (Small Language Models) [cite: 11, 98, 527, 528]",
-    "outils_web": "Visual Studio Code, Firebase Firestore, API PayPal, Formspree, GitHub Pages [cite: 10, 75, 228, 337, 510]"
+    "systemes": "Windows Server 2022 (AD DS, GPO, DNS, DHCP, WDS), Linux (Debian, Ubuntu, Kali), Bash, PowerShell, Python",
+    "reseaux": "Cisco Catalyst (Switchs, Routeurs), VLAN 802.1Q, Routage Inter-VLAN, OSPF, BGP, STP/RSTP, IP Helper, Wireshark",
+    "securite": "Pare-feu pfSense, VPN IPsec & WireGuard, Fail2ban, SSH par clé Ed25519, IDS/IPS Suricata, RADIUS/802.1X, Kerberos",
+    "virtualisation_cloud": "Proxmox VE, VMware ESXi/Workstation, Docker, Haute disponibilité, Sauvegardes",
+    "supervision_gestion": "GLPI (ticketing), OCS Inventory, Zabbix (SNMPv3), Gestion de projet (Cahiers des charges, recettes, tests, Gantt)",
+    "developpement": "HTML5, CSS3, JavaScript ES6, React, Tailwind CSS, PHP, SQL, Firebase Firestore"
   },
+  "protocoles_maitrises": [
+    "OSPF", "BGP", "RIP v2", "802.1Q (VLAN)", "STP / RSTP", "ICMP", "ARP",
+    "SSH", "IPsec (IKEv2)", "WireGuard", "TLS / SSL 1.3", "RADIUS / 802.1X", "Kerberos v5",
+    "DNS / DNSSEC", "DHCP", "LDAP / LDAPS", "NTP", "SNMP v3", "SMB v3",
+    "TCP", "UDP", "HTTP / HTTPS", "SFTP", "SMTP / SMTPS"
+  ],
   "projets_et_realisations": {
-    "Rituels_du_Monde_Spa": {
-      "concept": "Plateforme hybride de Spa & Bien-être [cite: 2, 43]",
-      "innovation_majeure": "Infrastructure IA hybride avec système de Failover (bascule automatique) [cite: 58, 98, 99]",
-      "details_techniques": {
-        "mode_nominal": "Requêtes vers API Mistral Cloud (modèle mistral-small) [cite: 19, 101, 102]",
-        "mode_degrade": "En cas de panne réseau (détectée par catch error JS), bascule sur Ollama local (modèle mistral-nemo < 7Go) [cite: 19, 23, 104-108]",
-        "fonctionnalites": "Wizard de réservation en 3 étapes (Soin, Date/Heure via Flatpickr, Finalisation) sans rechargement de page [cite: 15, 38, 68-71]",
-        "securite": "Données clients stockées exclusivement sur Firebase Firestore, logs IA sans données personnelles (RGPD) [cite: 25, 40, 122]"
-      }
+    "Chicken_Point": {
+      "annee": "2025",
+      "concept": "Site vitrine responsive pour un restaurant rapide à Aubervilliers (menus, ScrollSpy, commande Uber Eats, formulaire Formspree).",
+      "technologies": ["HTML", "CSS", "JavaScript"]
     },
-    "Shop_Ton_Auto_Concession": {
-      "concept": "Plateforme de vente de véhicules d'occasion [cite: 125, 182, 190]",
-      "details_techniques": {
-        "front_office": "Filtrage dynamique (budget, carburant, année) et formulaire de demande de rachat de véhicule [cite: 145, 179, 207-213]",
-        "back_office": "Dashboard sécurisé pour le gérant avec gestion complète du stock (CRUD) et réception des leads [cite: 148, 176, 218-223]",
-        "tests": "Validation de la navigation clavier (Tab) et de la redirection automatique vers login si accès non autorisé au dashboard [cite: 153, 156]"
-      }
+    "E_Portfolio": {
+      "annee": "2026",
+      "concept": "Portfolio interactif BTS SIO SISR avec référentiel de 24 protocoles, simulateur d'incidents en terminal CLI (CyberLab) et assistant IA.",
+      "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "Express"]
     },
-    "Chicken_Point_Restauration": {
-      "concept": "Site vitrine pour restaurant à Aubervilliers [cite: 244, 307, 320]",
-      "details_techniques": {
-        "architecture": "Développement statique sur mesure (HTML/CSS/JS) pour une sécurité maximale et rapidité de chargement [cite: 335, 336, 394]",
-        "interactivite": "Navigation interne par ScrollSpy (Top Ventes, Burgers, Tex-Mex) et bouton flottant de commande Uber Eats [cite: 261, 356, 359]",
-        "contact": "Formulaire géré via l'API AJAX Formspree [cite: 261, 337, 364]"
-      }
+    "Rituals_Du_Monde": {
+      "annee": "2026",
+      "concept": "Plateforme Spa & Bien-être avec système de réservation en 3 étapes, boutique et architecture IA hybride (Mistral Cloud + Failover local Ollama + Firebase Firestore).",
+      "technologies": ["HTML", "CSS", "JavaScript", "Firebase", "IA Hybride"]
+    },
+    "Shop_Ton_Auto": {
+      "annee": "2026",
+      "concept": "Plateforme de concession automobile avec filtrage dynamique des véhicules, estimation de reprise et dashboard CRUD sécurisé.",
+      "technologies": ["HTML", "CSS", "JavaScript"]
     },
     "Infrastructure_Active_Directory_WDS": {
-      "concept": "Infrastructure d'entreprise Windows Server 2022",
-      "details_techniques": {
-        "services": "Contrôleur de domaine AD DS, GPO, DHCP et DNS",
-        "deploiement": "Automatisation du déploiement de postes clients avec WDS et Clonezilla"
-      }
+      "annee": "2026",
+      "concept": "Déploiement d'une infrastructure Windows Server 2022 complète : contrôleur de domaine AD DS, GPO, DNS, DHCP et déploiement automatisé WDS.",
+      "technologies": ["Windows Server", "Active Directory", "GPO", "WDS"]
     },
     "Supervision_GLPI_Zabbix": {
-      "concept": "Plateforme de gestion de parc et de supervision informatique",
-      "details_techniques": {
-        "inventaire": "Inventaire automatisé avec OCS Inventory",
-        "ticketing": "Gestion centralisée du cycle de vie des incidents via GLPI",
-        "monitoring": "Surveillance des serveurs et switchs en temps réel avec Zabbix"
-      }
+      "annee": "2026",
+      "concept": "Plateforme d'inventaire automatisé OCS Inventory, gestion de tickets d'incidents GLPI et supervision temps réel Zabbix.",
+      "technologies": ["GLPI", "Zabbix", "OCS Inventory", "Linux"]
     },
     "Securisation_Reseau_pfSense": {
-      "concept": "Architecture réseau sécurisée avec pare-feu pfSense et VPN",
-      "details_techniques": {
-        "segmentation": "VLANs étanches (utilisateurs, serveurs, invités)",
-        "firewall": "Règles de filtrage strictes et portail captif sécurisé",
-        "acces_distant": "Tunnels VPN IPsec et OpenVPN chiffrés"
-      }
+      "annee": "2026",
+      "concept": "Architecture réseau sécurisée multi-zones : pare-feu pfSense, segmentation inter-VLAN, portail captif et tunnels VPN chiffrés.",
+      "technologies": ["pfSense", "Cisco", "VLAN", "VPN"]
     }
   },
   "veille_technologique": {
-    "sujet": "L'apport de l'IA dans la cyberdéfense proactive et l'anticipation des menaces [cite: 415, 416]",
-    "problematique": "Passer d'une sécurité réactive à une posture prédictive face aux cybermenaces [cite: 418]",
+    "sujet": "L'apport de l'Intelligence Artificielle dans la cyberdéfense proactive et l'anticipation des menaces.",
+    "problematique": "Comment passer d'une posture de sécurité purement réactive à une cyberdéfense prédictive et automatisée ?",
     "axes_de_recherche": [
-      "IA Prédictive : Analyse comportementale pour détecter les anomalies réseau avant l'attaque finale [cite: 428-430]",
-      "Automatisation des SOC : Utilisation de Copilotes de sécurité (IA générative) pour trier les alertes et réduire le temps d'investigation [cite: 432-437, 444]",
-      "IA contre IA : Réponse aux malwares polymorphes par une IA défensive capable de réagir en quelques millisecondes [cite: 438-440]"
+      "1. IA Prédictive & Analyse Comportementale (UEBA) pour contrer les attaques zero-day",
+      "2. Automatisation des SOC & Copilotes IA (réduction du MTTR et triage des alertes)",
+      "3. IA Défensive vs IA Offensive face aux malwares polymorphes"
     ],
-    "outils": "Feedly (flux RSS ANSSI, LeMagIT, ZDNet), Google Alerts, Rapports Gartner/IBM [cite: 422-424, 444, 491]"
+    "outils": "Feedly (flux RSS ANSSI / CERT-FR, LeMagIT, ZDNet), Google Alerts"
   },
   "experiences_professionnelles": [
     {
       "intitule": "Stagiaire Administrateur Systèmes & Réseaux",
-      "type": "Stage",
-      "periode": "Mai 2025 — Juillet 2025 (7 semaines)",
-      "structure": "DSI / Entreprise Partenaire (Île-de-France)",
-      "missions": [
-        "Déploiement et intégration de postes Windows 10/11 et Linux au domaine Active Directory avec application de GPO",
-        "Configuration d'équipements réseaux Cisco : switchs, segmentation et routage inter-VLAN, points d'accès Wi-Fi",
-        "Gestion du parc informatique, inventaire et traitement des tickets incidents N1/N2 via GLPI & OCS Inventory",
-        "Surveillance et durcissement des accès réseaux, application des correctifs de sécurité"
-      ]
+      "type": "Stage (2ème année)",
+      "periode": "Mai 2025 — Juillet 2025",
+      "missions": "Administration serveurs Windows/Linux, intégration Active Directory (GPO), segmentation VLAN Cisco, support N1/N2 et inventaire GLPI/OCS."
     },
     {
       "intitule": "Stagiaire Technicien Support & Infrastructure",
-      "type": "Stage",
+      "type": "Stage (1ère année)",
       "periode": "2024 (6 semaines)",
-      "structure": "Service Informatique & Maintenance (Île-de-France)",
-      "missions": [
-        "Diagnostic matériel et logiciel, maintenance préventive et curative du parc de postes",
-        "Brassage de baies de serveurs, câblage réseau RJ45 et validation de continuité",
-        "Mise en place de partages réseau sécurisés, imprimantes partagées et rédaction de fiches de procédures",
-        "Assistance directe et accompagnement des utilisateurs"
-      ]
+      "missions": "Maintenance préventive et curative du parc informatique, brassage de baies et câblage RJ45, déploiement de partages réseau sécurisés."
     },
     {
       "intitule": "Employé polyvalent",
       "type": "Emploi étudiant",
       "periode": "2025 — Présent",
       "structure": "E.Leclerc (Vitry-Sur-Seine)",
-      "missions": [
-        "Accueil et relation client, encaissement et travail en équipe dans un environnement dynamique"
-      ]
+      "missions": "Relation client, gestion de caisse, organisation et travail en équipe."
     }
   ],
   "autres_activites": {
-    "professionnel": "Hôte de caisse / Employé polyvalent chez E.Leclerc (Vitry) depuis juin 2025 [cite: 530, 531]",
-    "interets": "Lutte (en club), musculation, voyages (Russie, Turquie, Pays-Bas, Maroc) [cite: 515-518]"
+    "interets": "Lutte (en club), musculation, veille cybersécurité, voyages (Russie, Turquie, Pays-Bas, Maroc)"
   }
 }
