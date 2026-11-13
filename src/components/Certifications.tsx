@@ -4,9 +4,9 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Certifications() {
   const { t } = useLanguage();
   const certs = [
-    { title: 'Packet Tracer', org: 'Cisco Networking Academy', date: '2024', link: 'https://www.credly.com/badges/69b6ffc9-da56-4f81-a7fc-1c4cb7db3dd4' },
-    { title: 'Bases Réseaux', org: 'Cisco Networking Academy', date: '2024', link: 'https://www.credly.com/badges/e683abb2-29de-404f-9384-ba3ec3d9a6f9' },
-    { title: 'Cybersécurité', org: 'Cisco Networking Academy', date: '2024', link: 'https://www.credly.com/badges/cf9111e8-3eb7-4b90-a7d5-dcad1aa5b2d3' }
+    { title: 'Packet Tracer', org: 'Cisco Networking Academy', date: '2025', link: 'https://www.credly.com/badges/69b6ffc9-da56-4f81-a7fc-1c4cb7db3dd4' },
+    { title: 'Bases Réseaux', org: 'Cisco Networking Academy', date: '2025', link: 'https://www.credly.com/badges/e683abb2-29de-404f-9384-ba3ec3d9a6f9' },
+    { title: 'Cybersécurité', org: 'Cisco Networking Academy', date: '2025', link: 'https://www.credly.com/badges/cf9111e8-3eb7-4b90-a7d5-dcad1aa5b2d3' }
   ];
 
   return (

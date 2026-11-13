@@ -80,28 +80,28 @@ export const translations = {
       badgeEdu: "Formation",
       badgeDiploma: "Diplôme",
       
-      // Stage 1
+      // Stage 1ère année
       stage1Title: "Stagiaire Administrateur Systèmes & Réseaux",
-      stage1Loc: "DSI / Entreprise Partenaire",
-      stage1Period: "Mai — Juil. 2025",
-      stage1Desc: "Administration de serveurs Windows/Linux, segmentation réseau Cisco et support utilisateurs GLPI.",
-      stage1Tag1: "Active Directory",
-      stage1Tag2: "Cisco & VLANs",
-      stage1Tag3: "GLPI / OCS",
+      stage1Loc: "Centre E.Leclerc, Vitry-sur-Seine",
+      stage1Period: "Mai — Juil. 2026",
+      stage1Desc: "Maintien en Conditions Opérationnelles (MCO), brassage réseau VLAN en salle serveur, gestion Active Directory & GLPI, déploiement de caisses nomades, parc IoT (PDA Zebra, EEG) et support N1/N2.",
+      stage1Tag1: "MCO & Brassage VLAN",
+      stage1Tag2: "Active Directory & GLPI",
+      stage1Tag3: "Parc IoT & Support N1/N2",
 
-      // Stage 2
-      stage2Title: "Stagiaire Technicien Support & Infrastructure",
-      stage2Loc: "Service Informatique & Maintenance",
-      stage2Period: "2024 (6 sem.)",
-      stage2Desc: "Maintenance du parc informatique, brassage de baies et déploiement de partages réseaux sécurisés.",
-      stage2Tag1: "Maintenance Parc",
-      stage2Tag2: "Câblage & Brassage",
-      stage2Tag3: "Support N1/N2",
+      // Stage 2ème année
+      stage2Title: "Stage Admin Systèmes, Réseaux & Cybersécurité",
+      stage2Loc: "Stage 2ème année · BTS SIO SISR",
+      stage2Period: "Nov. 2026 — Janv. 2027",
+      stage2Desc: "Administration systèmes avancée (Windows Server/Linux), virtualisation Proxmox/VMware, routage inter-VLAN et sécurisation par pare-feu pfSense.",
+      stage2Tag1: "Proxmox & VMware",
+      stage2Tag2: "pfSense & DMZ",
+      stage2Tag3: "Systèmes & Réseaux",
 
       // Formation BTS
       btsTitle: "BTS SIO (Option SISR)",
       btsLoc: "Lycée Turgot, Paris",
-      btsPeriod: "2024 — 2026",
+      btsPeriod: "2025 — 2026",
       btsDesc: "Administration des serveurs (Windows/Linux), routage & VLANs, et cybersécurité des infrastructures.",
       btsTag1: "Windows / Linux",
       btsTag2: "Réseaux & VLANs",
@@ -316,28 +316,28 @@ export const translations = {
       badgeEdu: "Education",
       badgeDiploma: "Diploma",
 
-      // Stage 1
+      // Stage 1st year
       stage1Title: "System & Network Admin Intern",
-      stage1Loc: "IT Department / Partner Company",
-      stage1Period: "May — July 2025",
-      stage1Desc: "Windows/Linux server administration, Cisco network segmentation, and GLPI user support.",
-      stage1Tag1: "Active Directory",
-      stage1Tag2: "Cisco & VLANs",
-      stage1Tag3: "GLPI / OCS",
+      stage1Loc: "E.Leclerc Center, Vitry-sur-Seine",
+      stage1Period: "May — July 2026",
+      stage1Desc: "Operational maintenance (MCO), server room VLAN patching, Active Directory & GLPI fleet management, mobile POS deployment, IoT fleet (Zebra PDA, ESL) and Tier 1/2 support.",
+      stage1Tag1: "MCO & VLAN Patching",
+      stage1Tag2: "Active Directory & GLPI",
+      stage1Tag3: "IoT Fleet & Tier 1/2",
 
-      // Stage 2
-      stage2Title: "IT Support & Infrastructure Intern",
-      stage2Loc: "IT Services & Maintenance",
-      stage2Period: "2024 (6 wks)",
-      stage2Desc: "IT fleet maintenance, rack patching, and secure network share deployments.",
-      stage2Tag1: "Hardware Maintenance",
-      stage2Tag2: "Rack Patching",
-      stage2Tag3: "Tier 1/2 Support",
+      // Stage 2nd year
+      stage2Title: "Systems, Networks & Cybersecurity Intern",
+      stage2Loc: "2nd Year Internship · BTS SIO SISR",
+      stage2Period: "Nov. 2026 — Jan. 2027",
+      stage2Desc: "Advanced system administration (Windows Server/Linux), Proxmox/VMware virtualization, inter-VLAN routing and pfSense firewall hardening.",
+      stage2Tag1: "Proxmox & VMware",
+      stage2Tag2: "pfSense & DMZ",
+      stage2Tag3: "Systems & Networks",
 
       // Formation BTS
       btsTitle: "BTS SIO Degree (SISR Option)",
       btsLoc: "Turgot High School, Paris",
-      btsPeriod: "2024 — 2026",
+      btsPeriod: "2025 — 2026",
       btsDesc: "Server administration (Windows/Linux), routing & VLANs, and infrastructure cybersecurity.",
       btsTag1: "Windows / Linux",
       btsTag2: "Networks & VLANs",

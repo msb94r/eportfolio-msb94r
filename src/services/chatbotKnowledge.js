@@ -223,7 +223,7 @@ const SKILLS_KNOWLEDGE = [
     reply: () =>
       `**Compétence Réseaux Cisco & Analyse de Trafic :**\n\n` +
       `• **Équipements Cisco** : Configuration CLI de switchs Catalyst et routeurs Cisco (VLANs 802.1Q, Trunks, **routage inter-VLAN**, **OSPF**, **STP/RSTP**, IP Helper).\n` +
-      `• **Simulation & Architecture** : Modélisation sous **Cisco Packet Tracer** (certification obtenue en 2024) et schématisation multi-périmètres.\n` +
+      `• **Simulation & Architecture** : Modélisation sous **Cisco Packet Tracer** (certification obtenue en 2025) et schématisation multi-périmètres.\n` +
       `• **Diagnostic & Métrologie** : Capture et dissection de trames avec **Wireshark** et surveillance des flux IP en temps réel avec **ntopNG**.`
   },
   {
@@ -410,22 +410,22 @@ const VEILLE_KNOWLEDGE = [
 // 6. PARCOURS, STAGES, CERTIFS, CYBERLAB, LANGUES & LOISIRS GRANULAIRES
 // ============================================================================
 function matchParcoursOrProfileSpecific(q) {
-  // Stage 2ème année (2025)
-  if (/(stage\s*(de\s*)?(2|deuxieme|2eme)|mai\s*2025|juil.*2025|dsi)/.test(q)) {
+  // Stage 2ème année (Nov. 2026 – Janv. 2027)
+  if (/(stage\s*(de\s*)?(2|deuxieme|2eme)|nov.*2026|janv.*2027|30\/11|24\/01)/.test(q)) {
     return (
-      `**Stage de 2ème année — Admin Systèmes & Réseaux (Mai – Juil. 2025) :**\n\n` +
-      `• **Structure** : DSI / Entreprise partenaire.\n` +
-      `• **Missions principales** : Administration de serveurs **Windows & Linux**, intégration **Active Directory (GPO)**, segmentation réseau **VLANs sur switchs Cisco**, support N1/N2 et gestion d'inventaire sous **GLPI / OCS**.\n` +
-      `• **Document** : Le **Rapport de stage 2ème année (PDF)** est consultable dans un nouvel onglet depuis la section **Projets**.`
+      `**Stage de 2ème année — Admin Systèmes, Réseaux & Cybersécurité (Nov. 2026 – Janv. 2027) :**\n\n` +
+      `• **Période** : De **novembre 2026 à janvier 2027** (8 semaines · 2ème année BTS SIO SISR).\n` +
+      `• **Périmètre technique** : Administration systèmes avancée (**Windows Server / AD**, **Linux Debian**), virtualisation de serveurs (**Proxmox VE / VMware**), routage inter-VLAN et sécurisation des flux par pare-feu (**pfSense / architecture DMZ**).\n` +
+      `• **Document** : Le **Rapport de stage 2ème année (PDF)** sera rattaché dans la section **Projets** à l'issue du stage.`
     );
   }
 
-  // Stage 1ère année (2024)
-  if (/(stage\s*(de\s*)?(1|premiere|1ere)|6\s*sem|brassage|rj45|cablage)/.test(q)) {
+  // Stage 1ère année (Mai – Juil. 2026 · Centre E.Leclerc Vitry-sur-Seine)
+  if (/(stage\s*(de\s*)?(1|premiere|1ere)|mai\s*2026|juil.*2026|brassage|rj45|cablage|mco|zebra|eeg|caisses nomades|leclerc.*stage|stage.*leclerc)/.test(q)) {
     return (
-      `**Stage de 1ère année — Technicien Support & Infrastructure (2024 · 6 sem.) :**\n\n` +
-      `• **Structure** : Service Informatique & Maintenance.\n` +
-      `• **Missions principales** : Maintenance préventive et curative du parc informatique, **brassage de baies et câblage RJ45**, support utilisateurs **N1/N2** et déploiement de partages réseau sécurisés.\n` +
+      `**Stage de 1ère année — Administrateur Systèmes & Réseaux (Mai – Juil. 2026) :**\n\n` +
+      `• **Organisme d'accueil** : **Centre E.Leclerc de Vitry-sur-Seine** (8 300 m² · 420 collaborateurs).\n` +
+      `• **Missions principales** : Maintien en Conditions Opérationnelles (**MCO**), **brassage réseau VLAN** en salle serveur/baies, administration **Active Directory** et ticketing/parc sous **GLPI**, déploiement de 3 **caisses nomades**, gestion du parc IoT (**PDA Zebra Android / étiquettes EEG**) et support **N1/N2** (résolution conflits IPv4/DHCP, VLAN 802.1Q, TPE).\n` +
       `• **Document** : Le **Rapport de stage 1ère année (PDF)** est consultable dans un nouvel onglet depuis la section **Projets**.`
     );
   }
@@ -434,9 +434,9 @@ function matchParcoursOrProfileSpecific(q) {
   if (/(rapport.*stage|stages\b)/.test(q)) {
     return (
       `**Les 2 Stages BTS SIO de Muslim Bayschanov :**\n\n` +
-      `• **Stage 2ème année (Mai – Juil. 2025)** : Stagiaire *Administrateur Systèmes & Réseaux* — Windows/Linux, Active Directory (GPO), VLANs Cisco, support & GLPI/OCS.\n` +
-      `• **Stage 1ère année (2024, 6 semaines)** : Stagiaire *Technicien Support & Infrastructure* — Maintenance parc, brassage baies RJ45, partages sécurisés et support N1/N2.\n\n` +
-      `Les deux **rapports de stage PDF** sont ouverts en un clic en bas de la section **Projets**.`
+      `• **Stage 2ème année (Nov. 2026 – Janv. 2027)** : *Administration Systèmes, Réseaux & Cybersécurité* — Virtualisation Proxmox/VMware, routage inter-VLAN, pare-feu pfSense/DMZ et administration systèmes avancée.\n` +
+      `• **Stage 1ère année (Mai – Juil. 2026)** : *Centre E.Leclerc Vitry-sur-Seine* — MCO, brassage VLAN en salle serveur, Active Directory, GLPI, déploiement de caisses nomades, parc IoT (PDA Zebra, EEG) et support N1/N2.\n\n` +
+      `Le **rapport de stage de 1ère année (PDF)** est déjà consultable en un clic en bas de la section **Projets**.`
     );
   }
 
@@ -470,7 +470,7 @@ function matchParcoursOrProfileSpecific(q) {
   // BTS SIO / Lycée Turgot / Filière
   if (/(bts\b|sio\b|sisr\b|slam\b|turgot|filiere|formation)/.test(q)) {
     return (
-      `**Formation — BTS SIO option SISR (2024 – 2026) :**\n\n` +
+      `**Formation — BTS SIO option SISR (2025 – 2026) :**\n\n` +
       `• **Établissement** : **Lycée Turgot** (Paris 3ème) — Diplôme d'État Bac+2 (120 crédits ECTS).\n` +
       `• **Spécialité SISR** : Administration systèmes (Windows Server/AD, Linux), réseaux Cisco & pare-feux pfSense, virtualisation Proxmox/VMware et supervision GLPI/Zabbix.\n` +
       `• **Alternance 2026** : Muslim prépare la suite de son parcours en contrat d'alternance de 12 mois à la rentrée 2026.`
@@ -481,20 +481,20 @@ function matchParcoursOrProfileSpecific(q) {
   if (/(certif|credly|badge|bases reseaux)/.test(q)) {
     if (/packet tracer/.test(q)) {
       return (
-        `**Certification Cisco — Packet Tracer (2024) :**\n\n` +
+        `**Certification Cisco — Packet Tracer (2025) :**\n\n` +
         `• **Délivrée par** : Cisco Networking Academy (badge vérifiable sur **Credly**).\n` +
         `• **Compétences validées** : Conception, câblage logique, configuration CLI d'équipements Cisco et simulation complète d'architectures réseau multi-VLANs.`
       );
     }
     if (/bases reseaux/.test(q)) {
       return (
-        `**Certification Cisco — Bases Réseaux / Networking Basics (2024) :**\n\n` +
+        `**Certification Cisco — Bases Réseaux / Networking Basics (2025) :**\n\n` +
         `• **Délivrée par** : Cisco Networking Academy (badge officiel **Credly**).\n` +
         `• **Compétences validées** : Modèles OSI/TCP-IP, adressage IPv4/IPv6, sous-réseautage CIDR, routage statique/dynamique et commutation.`
       );
     }
     return (
-      `**Certifications Cisco Networking Academy (2024 — Badges Credly) :**\n\n` +
+      `**Certifications Cisco Networking Academy (2025 — Badges Credly) :**\n\n` +
       `• **Cisco Packet Tracer** : Simulation et conception d'architectures réseau.\n` +
       `• **Bases Réseaux** : Adressage IP, sous-réseaux, commutation et routage.\n` +
       `• **Cybersécurité** : Menaces, durcissement système et défense périmétrique.\n\n` +
@@ -825,7 +825,7 @@ export function generateSmartReply(input) {
     return (
       "**Profil synthétique de Muslim Bayschanov :**\n\n" +
       "Étudiant en **BTS SIO option SISR** au **Lycée Turgot (Paris 3ème)** après un Bac STMG (2024), basé à **Vitry-Sur-Seine**.\n\n" +
-      "• **Expériences** : 2 stages informatiques (Admin Systèmes & Réseaux 2025, Support & Infra 2024) + employé polyvalent E.Leclerc.\n" +
+      "• **Expériences** : Stage 1ère année chez E.Leclerc Vitry-sur-Seine (Mai – Juil. 2026), stage 2ème année (Nov. 2026 – Janv. 2027) et employé polyvalent E.Leclerc.\n" +
       "• **Certifications** : 3 badges Cisco Networking Academy (Packet Tracer, Bases Réseaux, Cybersécurité).\n" +
       "• **Objectif** : Alternance de **12 mois** à la rentrée 2026 en Systèmes, Réseaux ou Cybersécurité."
     );

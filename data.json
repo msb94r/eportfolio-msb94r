@@ -3,7 +3,7 @@
     "identite": "Muslim Bayschanov",
     "statut": "Étudiant en BTS SIO (Services Informatiques aux Organisations)",
     "specialite": "Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)",
-    "formation": "Lycée Turgot (Paris 3ème)",
+    "formation": "Lycée Turgot (Paris 3ème, 2025 — 2026)",
     "baccalaureat": "Baccalauréat STMG — Spécialité Mercatique & RH (Lycée Jean Macé, Vitry-Sur-Seine, 2024)",
     "recherche": {
       "alternance": "Contrat d'alternance de 12 mois en administration systèmes, réseaux et cybersécurité pour la rentrée 2026"
@@ -24,9 +24,9 @@
     }
   },
   "certifications": [
-    "Cisco Networking Academy — Packet Tracer (2024, badge Credly)",
-    "Cisco Networking Academy — Bases Réseaux / Networking Basics (2024, badge Credly)",
-    "Cisco Networking Academy — Cybersécurité (2024, badge Credly)"
+    "Cisco Networking Academy — Packet Tracer (2025, badge Credly)",
+    "Cisco Networking Academy — Bases Réseaux / Networking Basics (2025, badge Credly)",
+    "Cisco Networking Academy — Cybersécurité (2025, badge Credly)"
   ],
   "competences_techniques": {
     "systemes": {
@@ -152,25 +152,25 @@
   },
   "experiences_professionnelles": [
     {
-      "intitule": "Stagiaire Administrateur Systèmes & Réseaux",
+      "intitule": "Stagiaire Administration Systèmes, Réseaux & Cybersécurité",
       "type": "Stage (2ème année)",
-      "periode": "Mai 2025 — Juillet 2025",
-      "structure": "DSI / Entreprise Partenaire",
-      "missions": "Administration serveurs Windows/Linux, intégration Active Directory (GPO), segmentation VLAN Cisco, support N1/N2 et inventaire GLPI/OCS."
+      "periode": "Novembre 2026 — Janvier 2027",
+      "structure": "BTS SIO SISR (8 semaines)",
+      "missions": "Administration systèmes avancée (Windows Server/Linux), virtualisation de serveurs (Proxmox/VMware), routage inter-VLAN et sécurisation des flux via pare-feu pfSense."
     },
     {
-      "intitule": "Stagiaire Technicien Support & Infrastructure",
+      "intitule": "Stagiaire Administrateur Systèmes & Réseaux",
       "type": "Stage (1ère année)",
-      "periode": "2024 (6 semaines)",
-      "structure": "Service Informatique & Maintenance",
-      "missions": "Maintenance préventive et curative du parc informatique, brassage de baies et câblage RJ45, support N1/N2 et déploiement de partages réseau sécurisés."
+      "periode": "Mai 2026 — Juillet 2026",
+      "structure": "Centre E.Leclerc (Vitry-sur-Seine)",
+      "missions": "Maintien en Conditions Opérationnelles (MCO), brassage réseau VLAN en salle serveur, administration Active Directory et ticketing GLPI, déploiement de caisses nomades, gestion du parc IoT (PDA Zebra, étiquettes EEG) et support N1/N2."
     },
     {
       "intitule": "Employé polyvalent",
       "type": "Emploi étudiant",
-      "periode": "2025 — Présent",
+      "periode": "Juin 2025 — Présent",
       "structure": "E.Leclerc (Vitry-Sur-Seine)",
-      "missions": "Relation client, gestion de caisse, organisation et travail en équipe."
+      "missions": "Relation client, gestion de caisse, gestion des stocks et renfort polyvalent."
     }
   ],
   "cyberlab_simulateur": {

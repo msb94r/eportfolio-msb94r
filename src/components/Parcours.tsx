@@ -10,27 +10,7 @@ export default function Parcours() {
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
 
   const items = [
-    // 1. Stage 1 - Admin Systèmes & Réseaux
-    {
-      id: 'stage1',
-      category: 'experience' as FilterType,
-      badge: t('parcours.badgeStage'),
-      badgeType: 'stage',
-      icon: Briefcase,
-      period: t('parcours.stage1Period'),
-      title: t('parcours.stage1Title'),
-      location: t('parcours.stage1Loc'),
-      desc: t('parcours.stage1Desc'),
-      tags: [
-        t('parcours.stage1Tag1'),
-        t('parcours.stage1Tag2'),
-        t('parcours.stage1Tag3'),
-      ],
-      spanAll: 'md:col-span-2',
-      spanExp: 'md:col-span-2',
-      spanEdu: '',
-    },
-    // 2. Stage 2 - Technicien Support & Infrastructure
+    // 1. Stage 2ème année - Nov. 2026 — Janv. 2027
     {
       id: 'stage2',
       category: 'experience' as FilterType,
@@ -48,6 +28,26 @@ export default function Parcours() {
       ],
       spanAll: 'md:col-span-1',
       spanExp: 'md:col-span-1',
+      spanEdu: '',
+    },
+    // 2. Stage 1ère année - Mai — Juil. 2026 (E.Leclerc Vitry-sur-Seine)
+    {
+      id: 'stage1',
+      category: 'experience' as FilterType,
+      badge: t('parcours.badgeStage'),
+      badgeType: 'stage',
+      icon: Briefcase,
+      period: t('parcours.stage1Period'),
+      title: t('parcours.stage1Title'),
+      location: t('parcours.stage1Loc'),
+      desc: t('parcours.stage1Desc'),
+      tags: [
+        t('parcours.stage1Tag1'),
+        t('parcours.stage1Tag2'),
+        t('parcours.stage1Tag3'),
+      ],
+      spanAll: 'md:col-span-2',
+      spanExp: 'md:col-span-2',
       spanEdu: '',
     },
     // 3. Formation BTS SIO SISR

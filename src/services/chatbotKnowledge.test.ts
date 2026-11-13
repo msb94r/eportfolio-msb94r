@@ -70,12 +70,16 @@ test('gives granular answers per specific veille axis and source', () => {
 test('distinguishes individual stages and projects instead of grouping them', () => {
   const stage1 = generateSmartReply('Quelles missions lors du stage de 1ère année ?');
   assert.match(stage1, /1ère année/);
+  assert.match(stage1, /Mai – Juil\. 2026/);
+  assert.match(stage1, /E\.Leclerc/);
   assert.match(stage1, /brassage/i);
-  assert.doesNotMatch(stage1, /Mai – Juil\. 2025/);
+  assert.doesNotMatch(stage1, /Nov\. 2026 – Janv\. 2027/);
 
   const stage2 = generateSmartReply('Parle-moi du stage de 2ème année');
   assert.match(stage2, /2ème année/);
-  assert.match(stage2, /Mai – Juil\. 2025/);
+  assert.match(stage2, /Nov\. 2026 – Janv\. 2027/);
+  assert.match(stage2, /pfSense/);
+  assert.doesNotMatch(stage2, /Mai – Juil\. 2026/);
 
   const rituels = generateSmartReply('Détails sur Rituels du Monde');
   assert.match(rituels, /Mistral Cloud/);
